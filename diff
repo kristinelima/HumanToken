@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The HumanToken - Beta Signup</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --accent-human: #3b82f6;
+  --accent-ai: #ef4444;
+  --border: #334155;
+}
+body { font-family:'Inter',sans-serif; background:var(--bg-primary); color:var(--text-primary); margin:0; padding:0; display:flex; justify-content:center; align-items:center; min-height:100vh;}
+form { background:var(--bg-card); padding:32px; border-radius:16px; border:1px solid var(--border); max-width:400px; width:100%; box-shadow:0 8px 32px rgba(59,130,246,0.2);}
+h2 { font-family:'Plus Jakarta Sans',sans-serif; text-align:center; margin-bottom:24px; }
+input[type=email] { width:100%; padding:14px; margin-bottom:16px; border-radius:12px; border:1px solid var(--border); background:#0b1220; color:white; font-size:14px;}
+button { width:100%; padding:14px; background:linear-gradient(135deg,var(--accent-human),#2563eb); color:white; border:none; border-radius:12px; cursor:pointer; font-weight:600; font-size:16px; transition:all 0.3s ease;}
+p { font-size:12px; color:var(--text-muted); text-align:center; margin-top:12px;}
+.success { color:#22c55e; display:none; font-weight:500;}
+.error { color:#ef4444; display:none; font-weight:500;}
+</style>
+</head>
+<body>
+
+<form action="https://formspree.io/f/xblwreja" method="POST" id="betaForm">
+  <h2>Join the HumanToken Beta</h2>
+  <label for="email" style="display:none;">Email Address</label>
+  <input type="email" name="email" id="email" placeholder="you@example.com" required>
+  <input type="hidden" name="product" value="HumanToken">
+  <input type="hidden" name="company" value="Silvante Innovations">
+  <button type="submit">Join Beta</button>
+  <p class="success" id="successMessage">Thanks — we'll email when beta opens.</p>
+  <p class="error" id="errorMessage">There was an error. Try again later.</p>
+  <p>No spam. You can unsubscribe any time.</p>
+</form>
+
+<script>
+const form = document.getElementById('betaForm');
+const successMsg = document.getElementById('successMessage');
+const errorMsg = document.getElementById('errorMessage');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  successMsg.style.display = 'none';
+  errorMsg.style.display = 'none';
+  const data = new FormData(form);
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept':'application/json' }
+    });
+    if(res.ok){ successMsg.style.display='block'; form.reset(); }
+    else { errorMsg.style.display='block'; }
+  } catch(err){ errorMsg.style.display='block'; }
+});
+</script>
+
+</body>
+</html>
