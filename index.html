@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The HumanToken - Silvante Innovations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --bg-card: #1e293b;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #64748b;
+      --accent-human: #3b82f6;
+      --accent-ai: #ef4444;
+      --accent-neutral: #6366f1;
+      --border: #334155;
+      --shadow: rgba(0, 0, 0, 0.3);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .hero-section { text-align: center; padding: 80px 20px 60px; background: linear-gradient(180deg, rgba(59,130,246,0.1) 0%, transparent 100%); position: relative; }
+    .logo { max-width: 120px; margin: 0 auto 30px; border-radius: 12px; box-shadow: 0 8px 32px rgba(59,130,246,0.3); }
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 800;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, var(--accent-human), var(--accent-ai));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .tagline { font-size: clamp(18px, 3vw, 24px); color: var(--text-secondary); margin-bottom: 40px; font-weight: 500; }
+    .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+    .btn { padding: 16px 32px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent-human) 0%, #2563eb 100%); color: white; box-shadow: 0 4px 20px rgba(59,130,246,0.4); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.6); }
+    .btn-secondary { background: var(--bg-card); color: var(--text-primary); border: 2px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--accent-human); background: var(--bg-secondary); }
+    .features-section { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; text-align: center; margin-bottom: 50px; color: var(--text-primary); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
+    .feature-card { background: var(--bg-card); padding: 40px 30px; border-radius: 16px; border: 1px solid var(--border); transition: all 0.3s ease; position: relative; overflow: hidden; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
+    .feature-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-human), var(--accent-ai)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
+    .feature-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary); }
+    .feature-description { color: var(--text-secondary); line-height: 1.7; font-size: 15px; }
+    footer { background: var(--bg-card); padding: 40px 20px; text-align: center; border-top: 1px solid var(--border); margin-top: 60px; }
+    .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 20px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 14px; transition: color 0.3s ease; }
+    .footer-links a:hover { color: var(--accent-human); }
+    .copyright { font-size: 12px; color: var(--text-muted); margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="hero-section">
+    <img src="https://pfst.cf2.poecdn.net/base/image/cfb326287739f4c5bd6f4017bd20f0657b8b85e2dbdc18043e47ac1dfe4182cd?w=1024&h=1024" alt="Silvante Innovations" class="logo">
+    <h1>The HumanToken</h1>
+    <p class="tagline">Balance Your Work Intelligence • Track • Analyze • Optimize</p>
+    <div class="cta-buttons">
+      <a href="https://poe.com/Silvante_Human-Token" class="btn btn-primary" target="_blank">Launch App</a>
+      <a href="#features" class="btn btn-secondary">Learn More</a>
+    </div>
+  </div>
+
+  <section id="features" class="features-section">
+    <h2 class="section-title">Why The HumanToken?</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"></div>
+        <h3 class="feature-title">Real-Time Tracking</h3>
+        <p class="feature-description">Track your work sessions in real-time and automatically log productivity patterns.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"></div>
+        <h3 class="feature-title">Visual Analytics</h3>
+        <p class="feature-description">Beautiful charts show how you balance independent thinking with AI-assisted productivity.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"></div>
+        <h3 class="feature-title">Smart Recommendations</h3>
+        <p class="feature-description">Get insights and suggestions based on your work patterns to optimize productivity.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://poe.com/Silvante_Human-Token" target="_blank">Launch App</a>
+      <a href="#features">Features</a>
+      <a href="#" onclick="alert('Documentation coming soon!'); return false;">Documentation</a>
+      <a href="#" onclick="alert('Contact: support@silvante.com'); return false;">Contact</a>
+      <a href="#" onclick="alert('Privacy Policy coming soon!'); return false;">Privacy</a>
+    </div>
+    <div class="copyright">
+      © 2025 Silvante Innovations. All Rights Reserved.<br>
+      The HumanToken is a product of Silvante Innovations.
+    </div>
+  </footer>
+</body>
+</html>
