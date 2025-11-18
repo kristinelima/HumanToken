@@ -42,7 +42,7 @@
     }
     .tagline { font-size: clamp(18px, 3vw, 24px); color: var(--text-secondary); margin-bottom: 40px; font-weight: 500; }
     .cta-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
-    .btn { padding: 16px 32px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+    .btn { padding: 16px 32px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; border: none; border-radius: 12px; cursor: pointer; transition: all 0.3s ease; text-decoration: none; }
     .btn-primary { background: linear-gradient(135deg, var(--accent-human) 0%, #2563eb 100%); color: white; box-shadow: 0 4px 20px rgba(59,130,246,0.4); }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.6); }
     .btn-secondary { background: var(--bg-card); color: var(--text-primary); border: 2px solid var(--border); }
@@ -52,7 +52,7 @@
     .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; }
     .feature-card { background: var(--bg-card); padding: 40px 30px; border-radius: 16px; border: 1px solid var(--border); transition: all 0.3s ease; position: relative; overflow: hidden; }
     .feature-card:hover { transform: translateY(-5px); box-shadow: 0 12px 40px rgba(0,0,0,0.5); }
-    .feature-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-human), var(--accent-ai)); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
+    .feature-icon { width: 60px; height: 60px; background: linear-gradient(135deg, var(--accent-human), var(--accent-ai)); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
     .feature-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text-primary); }
     .feature-description { color: var(--text-secondary); line-height: 1.7; font-size: 15px; }
     footer { background: var(--bg-card); padding: 40px 20px; text-align: center; border-top: 1px solid var(--border); margin-top: 60px; }
@@ -64,11 +64,13 @@
 </head>
 <body>
   <div class="hero-section">
-    <img src="https://pfst.cf2.poecdn.net/base/image/cfb326287739f4c5bd6f4017bd20f0657b8b85e2dbdc18043e47ac1dfe4182cd?w=1024&h=1024" alt="Silvante Innovations" class="logo">
+    <a href="https://beta.silvante.org" target="_blank" rel="noopener noreferrer">
+      <img src="https://pfst.cf2.poecdn.net/base/image/cfb326287739f4c5bd6f4017bd20f0657b8b85e2dbdc18043e47ac1dfe4182cd?w=1024&h=1024" alt="Silvante Innovations" class="logo">
+    </a>
     <h1>The HumanToken</h1>
     <p class="tagline">Balance Your Work Intelligence • Track • Analyze • Optimize</p>
     <div class="cta-buttons">
-      <a href="https://poe.com/Silvante_Human-Token" class="btn btn-primary" target="_blank">Launch App</a>
+      <a href="https://beta.silvante.org" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Launch App</a>
       <a href="#features" class="btn btn-secondary">Learn More</a>
     </div>
   </div>
@@ -96,7 +98,7 @@
 
   <footer>
     <div class="footer-links">
-      <a href="https://poe.com/Silvante_Human-Token" target="_blank">Launch App</a>
+      <a href="https://beta.silvante.org" target="_blank" rel="noopener noreferrer">Launch App</a>
       <a href="#features">Features</a>
       <a href="#" onclick="alert('Documentation coming soon!'); return false;">Documentation</a>
       <a href="#" onclick="alert('Contact: support@silvante.com'); return false;">Contact</a>
